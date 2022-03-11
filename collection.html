@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="디 오리지널 홈갤러리 | The Original Homegallery">
+    <meta property="og:url" content="https://sophia9156.github.io/-_211201/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/main.jpg">
+    <meta property="og:site_name" content="디 오리지널 홈갤러리 | The Original Homegallery">
+    <meta property="og:description" content="">
+    
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="css/inc2.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="javascript/collection.js"></script>
+    <script defer src="javascript/inc2.js"></script>
+    <title>디 오리지널 홈갤러리 | The Original Homegallery</title>
+</head>
+<body>
+    <header></header>
+    <div class="bg"></div>
+    <aside>
+        <div>
+            <img src="img/textsms_white_24dp.svg" alt="">
+        </div>
+        <div class="top-button">
+            <img src="img/north_white_24dp.svg" alt="">
+        </div>
+    </aside>
+    <main>
+        <div class="title">
+            <h2>Collection</h2>
+            <p>
+                HOME
+                <span></span>
+                COLLECTION
+            </p>
+        </div>
+        <div class="collection-description">
+            <span class="kor">개성 있는 </span>Homegallery
+            <span class="kor">작가들의 <br>
+            다채로운 작품세계를 만나보세요.</span>
+        </div>
+        <div class="category">
+            <ul class="select-country">
+                <li>국내작품</li>
+                <span></span>
+                <li>해외작품</li>
+            </ul>
+            <div class="search">
+                <select class="search-filter" name="searchType">
+                    <option value="latest">전체</option>
+                    <option value="oldest">작가 이름</option>
+                    <option value="oldest">호 또는 예명</option>
+                    <option value="oldest">작품 이름</option>
+                </select>
+                <input type="search" name="seacrhCollection">
+                <div class="magnifier">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="filter">
+            <div class="filter-top">
+                필터 펼치기
+                <div class="filter-toggle">
+                    <span>open</span>
+                    <span>close</span>
+                </div>
+                <div class="filter-refresh">
+                    초기화
+                    <span class="material-icons-outlined">
+                        refresh
+                    </span>
+                </div>
+            </div>
+            <div class="filter-content">
+                <ul class="filter-content-title">
+                    <li>작품타입</li>
+                    <li>재료</li>
+                    <li>작품종류</li>
+                    <li>색상</li>
+                    <li>캔버스</li>
+                    <li>사이즈</li>
+                    <li>형태</li>
+                    <li>가격</li>
+                </ul>
+                <div class="filter-content-cnt">
+                    <ul class="type">                    
+                        <li>전체</li>
+                        <li>서양화</li>
+                        <li>동양화</li>
+                        <li>조각</li>
+                        <li>공예</li>
+                        <li>소묘</li>
+                        <li>판화</li>
+                        <li>Photography</li>
+                        <li>Digital Art</li>
+                        <li>기타</li>
+                    </ul>
+                    <ul class="material">                    
+                        <li>전체</li>
+                        <li>오일</li>
+                        <li>아크릴</li>
+                        <li>과슈</li>
+                        <li>수채</li>
+                        <li>수묵/수묵담채</li>
+                        <li>진채</li>
+                        <li>Airbrush</li>
+                        <li>Digital</li>
+                        <li>기타</li>
+                    </ul>
+                    <ul class="genre">                    
+                        <li>전체</li>
+                        <li>인물</li>
+                        <li>동물</li>
+                        <li>정물</li>
+                        <li>풍경</li>
+                        <li>추상</li>
+                        <li>상상</li>
+                        <li>Pop Art</li>
+                        <li>기타</li>
+                    </ul>
+                    <ul class="color">                    
+                        <li>전체</li>
+                        <li><img src="img/collection/solid_color.png" alt="">단색화</li>
+                        <li><img src="img/collection/multi_color.png" alt="">다색화</li>
+                    </ul>
+                    <ul class="canvas">                    
+                        <li>전체</li>
+                        <li>캔버스</li>
+                        <li>직물</li>
+                        <li>패널</li>
+                        <li>종이</li>
+                        <li>한지</li>
+                        <li>기타</li>
+                    </ul>
+                    <ul class="size">                    
+                        <li>전체</li>
+                        <li>0~5</li>
+                        <li>~10</li>
+                        <li>~30</li>
+                        <li>~60</li>
+                        <li>~100</li>
+                        <li>~500</li>
+                    </ul>
+                    <ul class="shape">                    
+                        <li>전체</li>
+                        <li><span class="square"></span>정사각형</li>
+                        <li><span class="horizontal"></span>가로형</li>
+                        <li><span class="vertical"></span>세로형</li>
+                        <li class="set-mother">
+                            <div>
+                                <span class="set set1"></span><span class="set set2"></span>
+                            </div>
+                            <div>세트</div>
+                        </li>
+                        <li>기타</li>
+                    </ul>
+                    <ul class="price">                    
+                        <li>전체</li>
+                        <li>~50만원</li>
+                        <li>50~100만원</li>
+                        <li>100~200만원</li>
+                        <li>200~300만원</li>
+                        <li>300~500만원</li>
+                        <li>500~700만원</li>
+                        <li>700~1,000만원</li>
+                        <li>1000만원~</li>
+                    </ul>
+                </div>                
+            </div>
+            <div class="filter-button">
+                <button>검색</button>
+            </div>
+        </div>
+        <ul class="collection">
+            <li>
+                <a href="#"><p><img src="img/collection/1639037258_1355_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>산책</h3>
+                    <div class="art-size">
+                        <p>34.0 x 53.0 cm (13.4 x 20.9 in)</p>
+                        <p>캔버스, 아크릴, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">HOMODEOOPS 한민수</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1639036785_7058_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>하늘 산책</h3>
+                    <div class="art-size">
+                        <p>73.0 x 91.0 cm (28.7 x 35.8 in)</p>
+                        <p>캔버스, 아크릴, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">HOMODEOOPS 한민수</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1639036519_8062_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>미래의 이동식 노점상</h3>
+                    <div class="art-size">
+                        <p>91.0 x 65.0 cm (35.8 x 25.6 in)</p>
+                        <p>캔버스, 아크릴, 2018</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">HOMODEOOPS 한민수</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1639036315_9443_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>미래의 이동식 노점상</h3>
+                    <div class="art-size">
+                        <p>91.0 x 65.0 cm (35.8 x 25.6 in)</p>
+                        <p>캔버스, 아크릴, 2018</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">HOMODEOOPS 한민수</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1639035930_9061_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>미래의 이동식 노점상</h3>
+                    <div class="art-size">
+                        <p>91.0 x 65.0 cm (35.8 x 25.6 in)</p>
+                        <p>캔버스, 아크릴, 2018</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">HOMODEOOPS 한민수</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1639035797_8690_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>미래의 이동식 노점상</h3>
+                    <div class="art-size">
+                        <p>91.0 x 73.0 cm (35.8 x 28.7 in)</p>
+                        <p>캔버스, 아크릴, 2018</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">HOMODEOOPS 한민수</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638847989_4519_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>염원(念願)-천상에서도</h3>
+                    <div class="art-size">
+                        <p>91.0 x 116.8 cm (35.8 x 46 in)</p>
+                        <p>캔버스, 과슈, 2018</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">이두리</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638847403_1371_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>영원한 삶</h3>
+                    <div class="art-size">
+                        <p>91.0 x 116.8 cm (35.8 x 46 in)</p>
+                        <p>캔버스, 과슈, 2017</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">이두리</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638783070_9503_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스12</h3>
+                    <div class="art-size">
+                        <p>60.0 x 110.0 cm (23.6 x 43.3 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638782564_6258_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스11</h3>
+                    <div class="art-size">
+                        <p>45.5 x 33.5 cm (17.9 x 13.2 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638782454_5999_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스10</h3>
+                    <div class="art-size">
+                        <p>45.5 x 33.5 cm (17.9 x 13.2 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638782014_1618_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스9</h3>
+                    <div class="art-size">
+                        <p>30.0 x 30.0 cm (11.8 x 11.8 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638781836_3290_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스8</h3>
+                    <div class="art-size">
+                        <p>30.0 x 30.0 cm (11.8 x 11.8 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638781873_4276_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스7</h3>
+                    <div class="art-size">
+                        <p>30.0 x 30.0 cm (11.8 x 11.8 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638781579_8719_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스5</h3>
+                    <div class="art-size">
+                        <p>30.0 x 30.0 cm (11.8 x 11.8 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638781246_4500_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스4</h3>
+                    <div class="art-size">
+                        <p>73.0 x 51.0 cm (28.7 x 20.1 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638781159_4921_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스3</h3>
+                    <div class="art-size">
+                        <p>73.0 x 51.0 cm (28.7 x 20.1 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2002</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638780919_4890_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스2</h3>
+                    <div class="art-size">
+                        <p>27.0 x 22.0 cm (10.6 x 8.7 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2002</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638780802_7608_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>아코이메토스1</h3>
+                    <div class="art-size">
+                        <p>27.0 x 22.0 cm (10.6 x 8.7 in)</p>
+                        <p>판넬 캔버스, 한지, 자개, 카슈, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">3056 임수빈</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638517624_1296_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>목화이야기 IV</h3>
+                    <div class="art-size">
+                        <p>53.0 x 40.9 cm (20.9 x 16.1 in)</p>
+                        <p>종이, 수묵/수채, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">윤슬 정규순</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638517473_7477_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>목화이야기 III</h3>
+                    <div class="art-size">
+                        <p>53.0 x 40.9 cm (20.9 x 16.1 in)</p>
+                        <p>캔버스, 아크릴, 단청안료, 먹, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">윤슬 정규순</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638517257_4010_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>목화이야기 II</h3>
+                    <div class="art-size">
+                        <p>53.0 x 40.9 cm (20.9 x 16.1 in)</p>
+                        <p>캔버스, 아크릴, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">윤슬 정규순</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638353367_6192_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연202101</h3>
+                    <div class="art-size">
+                        <p>130.0 x 194.0 cm (51.2 x 76.4 in)</p>
+                        <p>캔버스, Mixed media, 2021</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638353158_1459_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연202004</h3>
+                    <div class="art-size">
+                        <p>24.0 x 33.0 cm (9.4 x 13 in)</p>
+                        <p>캔버스, 오일, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638352971_8578_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연-치악산1</h3>
+                    <div class="art-size">
+                        <p>91.0 x 117.0 cm (35.8 x 46.1 in)</p>
+                        <p>캔버스, Mixed media, 2019</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638352772_8467_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연-태백산맥1</h3>
+                    <div class="art-size">
+                        <p>66.0 x 150.0 cm (26 x 59.1 in)</p>
+                        <p>캔버스, 오일, 2018</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638352574_2304_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연201801</h3>
+                    <div class="art-size">
+                        <p>130.0 x 162.0 cm (51.2 x 63.8 in)</p>
+                        <p>캔버스, Mixed media, 2018</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638352368_2841_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연-VIOLET2</h3>
+                    <div class="art-size">
+                        <p>60.0 x 60.0 cm (23.6 x 23.6 in)</p>
+                        <p>캔버스, 오일, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638352206_4583_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연-RED2</h3>
+                    <div class="art-size">
+                        <p>60.0 x 60.0 cm (23.6 x 23.6 in)</p>
+                        <p>캔버스, 오일, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638351993_5326_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연-RED1</h3>
+                    <div class="art-size">
+                        <p>162.0 x 162.0 cm (63.8 x 63.8 in)</p>
+                        <p>캔버스, Mixed media, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638351823_7645_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연-BLUE1</h3>
+                    <div class="art-size">
+                        <p>162.0 x 162.0 cm (63.8 x 63.8 in)</p>
+                        <p>캔버스, Mixed media, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>
+            <li>
+                <a href="#"><p><img src="img/collection/1638351610_8172_m.jpg" alt=""></p></a>
+                <div class="art-description">
+                    <h3>무위자연-VIOLET1</h3>
+                    <div class="art-size">
+                        <p>162.0 x 162.0 cm (63.8 x 63.8 in)</p>
+                        <p>캔버스, Mixed media, 2020</p>
+                    </div>
+                    <div class="like">
+                        <span>0</span>                        
+                        <span class="material-icons-outlined">
+                            favorite_border
+                        </span>
+                    </div>                    
+                </div>
+                <p class="nameSection">
+                    <span class="name">권대영</span>
+                    <span class="selling">판매중</span>
+                </p>
+            </li>            
+        </ul>
+        <ul class="index">
+            <a href="#">《</a>
+            <a href="#">〈</a>
+            <a href="#" class="idxActive">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#">〉</a>
+            <a href="#">》</a>
+        </ul>
+    </main>
+    <footer></footer>
+</body>
+</html>

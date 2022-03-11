@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// font-family: 'Playfair Display', serif;
+// font-family: 'DM Serif Display', serif;
+// font-family: 'Roboto', sans-serif;
+
+body{margin: 0;}
+h1,h2,h3,h4,h5,h6,p,figure{margin: 0;}
+*{box-sizing: border-box;}
+a{text-decoration: none;}
+ul,li{list-style-type: none; padding: 0; margin: 0;}
+image{vertical-align: middle;}
+table{border-collapse: collapse;}
+
+*{font-family: 'Open Sans', sans-serif; font-weight:300;}
+h2{font-size: 5rem; font-family: 'DM Serif Display', serif; font-weight:200;}
+.material-icons-outlined{font-family: 'Material Icons';}
+
+$white-t: rgba(255, 255, 255, 0.5);
+$black-t: rgba(0,0,0,0.7);
+$dark-brown: #946e45;
+$brown: #a5805a;
+$light-brown:rgb(199, 156, 108);
+$bg-grey: #302f2e;
+$btn-grey: #242322;
+$font-grey: #797877;
+$light-grey: #b0b0b0;
+$dark-red: #9b0606;
+
+
+$mobile: 800px;
+$tablet: 1280px;

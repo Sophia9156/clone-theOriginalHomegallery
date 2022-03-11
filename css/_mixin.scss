@@ -1,0 +1,14 @@
+@mixin flex($a, $b, $c, $d) {
+    display: flex;
+    justify-content: $a;
+    align-items: $b;
+    flex-wrap: $c;
+    flex-direction: $d;
+}
+@mixin square($a, $b, $c){
+    display: $a;
+    width: $b; height: $c;
+    background-color: #fff;
+    vertical-align: middle;
+    margin-right: 5px;
+}

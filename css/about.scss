@@ -1,0 +1,599 @@
+@import '_common.scss';
+@import '_mixin.scss';
+
+::-webkit-scrollbar{display:none;}
+
+aside{
+    .scroll{
+        position: fixed;
+        left: calc(50% - 50px); bottom: 0;
+        width: 100px;
+        color: #fff; font-size: 0.9rem; font-weight: 600;
+        z-index: 9;
+        @include flex(center,center,nowrap,column);
+
+        animation: scroll 1s infinite alternate ease-in;
+        @keyframes scroll {
+            100%{transform: translateY(60px);}
+        }
+        span{
+            display: block;
+            width: 1px; height: 100px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+    }
+
+    .button{
+        position: fixed;
+        right: 1rem; bottom: 4rem;
+        cursor: pointer;
+        z-index: 9;
+
+        div{
+            width: 4vw; height: 4vw;
+            border-radius: 4vw;
+            @include flex(center,center,nowrap,row);
+            margin: 20px 0;
+            img{
+                width: 35%;
+            }
+        }
+        div:nth-child(1){
+            background-color: $dark-red;
+        }
+        div:nth-child(2){
+            background-color: $btn-grey;
+        }
+    }
+}
+
+main{
+    position: relative;
+    div{
+        width: 100%; height: 0vh;
+        visibility: hidden;
+        h2{            
+            font-family: 'DM Serif Display', serif; color: #fff;
+        }
+    }
+    $bgUrl : (
+        1:'../img/about/sub_visual_1.jpg',
+        2:'../img/about/about_img_1.jpg',
+        3:'../img/about/about_img_3_1.jpg',
+        4:'../img/about/about_img_3_2.jpg',
+        5:'../img/about/about_img_3_3.jpg',
+        6:'../img/about/about_img_5.jpg',
+        7:'../img/about/about_img_6.jpg',
+        8:'../img/about/about_img_7.jpg'
+        );
+    @each $k,$v in $bgUrl {
+        .sec:nth-of-type(#{$k}){
+            background: url($v) center center / cover no-repeat;
+        }
+    }   
+}
+
+
+
+@keyframes showText {
+    0%{color: rgba(0,0,0,0);}
+    100%{transform: translateX(0); color: rgba(255,255,255,1);}
+}
+@keyframes showText2 {
+    0%{color: rgba(0,0,0,0);}
+    100%{transform: translateX(15vw); color: rgba(255,255,255,1);}
+}
+
+.sec-01{ 
+    h2{
+        position: absolute;
+        left: 15vw; top: 38vh;
+        span:nth-child(1){
+            font-family: 'DM Serif Display', serif;
+            display: block;
+            color: rgba(0,0,0,0);
+            transform: translateX(-5vw);
+            animation: showText 1s forwards;
+        }
+        span:nth-child(2){
+            font-family: 'DM Serif Display', serif;
+            display: block;
+            color: rgba(0,0,0,0);
+            transform: translateX(10vw);
+            animation: showText2 1s forwards;
+            animation-delay: .3s;
+        }
+    }
+}
+
+.sec-02{
+    text-align: center;
+    @include flex(center,center,nowrap,column);
+    h3{
+        color: $brown; font-weight: 600;
+    }
+    p{
+        color: $light-grey; font-size: 1.4rem; font-weight: 400;
+        margin: 30px 0;
+    }
+}
+.sec-03, .sec-04, .sec-05{
+    padding: 0 15%;
+    @include flex(center,flex-start,nowrap,column);
+    h2{
+        position: relative;
+        font-size: 6rem;
+        img{
+            position: absolute;
+            left: -5vw; top: -3vw;
+        }
+    }
+    p{
+        color: #fff; font-size: 1.4rem; font-weight: 400;
+    }
+    ul{
+        margin: 70px 0;
+        @include flex(flex-start,center,nowrap,row);
+        li{
+            margin-right: 50px;
+            color: #fff; font-size: 1.2rem; font-weight: 400;
+            span{
+                display: block;
+                width: 20rem; height: 3px;
+                background-color: #fff;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+.sec-06, .sec-07{
+    @include flex(center,center,nowrap,column);
+    text-align: center;
+    h3{
+        font-size: 2.3rem; font-weight: 600; color: #fff;
+        span{
+            color: $light-brown; font-weight: 600; font-family: 'Playfair Display', serif;
+            font-size: 4rem; font-style: italic;
+        }
+    }
+}
+.sec-08{
+    padding: 0 12%;
+    @include flex(center,baseline,nowrap,row);
+    article{
+        @include flex(center,flex-start,nowrap,column);
+        width: 24.5%; height: 100%;
+        border-left: 1px solid rgba(255,255,255,0.3);
+        padding: 0 2%;
+        transition: .3s;
+        h3{
+            width: 60%;
+            font-weight: 600; font-family: 'Playfair Display', serif; font-size: 2.3rem;
+            color: #fff;
+            margin: 2vw 0;
+            transition: .3s;
+        }
+        p{
+            color: #fff; font-weight: 400; font-size: 1.2em;
+            transition: .3s;
+        }
+        &:hover{
+            background: rgba(0,0,0,0.4);
+            h3{color: $brown;}
+            p{color: $brown;}
+        }
+    }
+    article:nth-child(4){
+        border-right: 1px solid rgba(255,255,255,0.3);
+        h3{margin-bottom: 4.7rem;}
+    }
+}
+
+
+
+
+
+
+
+
+
+//=======================================tablet===================================
+//================================================================================
+@media (min-width:$mobile) and (max-width:$tablet){
+
+    aside{
+        .scroll{
+            position: fixed;
+            left: calc(50% - 50px); bottom: 0;
+            width: 100px;
+            color: #fff; font-size: 0.7rem; font-weight: 600;
+            z-index: 9;
+            @include flex(center,center,nowrap,column);
+    
+            animation: scroll 1s infinite alternate ease-in;
+            @keyframes scroll {
+                100%{transform: translateY(60px);}
+            }
+            span{
+                display: block;
+                width: 1px; height: 100px;
+                background-color: #fff;
+                margin-top: 20px;
+            }
+        }
+    
+        .button{
+            position: fixed;
+            right: 1rem; bottom: 4rem;
+            cursor: pointer;
+            z-index: 9;
+    
+            div{
+                width: 4vw; height: 4vw;
+                border-radius: 4vw;
+                @include flex(center,center,nowrap,row);
+                margin: 20px 0;
+                img{
+                    width: 50%;
+                }
+            }
+            div:nth-child(1){
+                background-color: $dark-red;
+            }
+            div:nth-child(2){
+                background-color: $btn-grey;
+            }
+        }
+    }
+    
+    
+    
+    
+    main{
+        position: relative;
+        div{
+            width: 100%; height: 100vh;
+            h2{            
+                font-family: 'DM Serif Display', serif; color: #fff;
+                font-size: 3.5rem;
+            }
+        }
+        $bgUrl : (
+            1:'../img/about/sub_visual_1.jpg',
+            2:'../img/about/about_img_1.jpg',
+            3:'../img/about/about_img_3_1.jpg',
+            4:'../img/about/about_img_3_2.jpg',
+            5:'../img/about/about_img_3_3.jpg',
+            6:'../img/about/about_img_5.jpg',
+            7:'../img/about/about_img_6.jpg',
+            8:'../img/about/about_img_7.jpg'
+            );
+        @each $k,$v in $bgUrl {
+            .sec:nth-of-type(#{$k}){
+                background: url($v) center center / cover no-repeat;
+            }
+        }    
+    }
+    
+    
+    
+    @keyframes showText {
+        0%{color: rgba(0,0,0,0);}
+        100%{transform: translateX(0); color: rgba(255,255,255,1);}
+    }
+    @keyframes showText2 {
+        0%{color: rgba(0,0,0,0);}
+        100%{transform: translateX(15vw); color: rgba(255,255,255,1);}
+    }
+    
+    .sec-01{ 
+        h2{
+            position: absolute;
+            left: 13vw; top: 38vh;
+            span:nth-child(1){
+                font-family: 'DM Serif Display', serif;
+                display: block;
+                color: rgba(0,0,0,0);
+                transform: translateX(-5vw);
+                animation: showText 1s forwards;
+            }
+            span:nth-child(2){
+                font-family: 'DM Serif Display', serif;
+                display: block;
+                color: rgba(0,0,0,0);
+                transform: translateX(10vw);
+                animation: showText2 1s forwards;
+                animation-delay: .3s;
+            }
+        }
+    }
+    
+    .sec-02{
+        text-align: center;
+        @include flex(center,center,nowrap,column);
+        h3{
+            color: $brown; font-weight: 600; font-size: 0.9rem;
+            margin: 30px 0;
+        }
+        p{
+            color: $light-grey; font-size: 1rem; font-weight: 400;
+            margin: 30px 0;
+        }
+    }
+    .sec-03, .sec-04, .sec-05{
+        padding: 0 15%;
+        @include flex(center,flex-start,nowrap,column);
+        h2{
+            position: relative;
+            font-size: 4rem;
+            img{
+                position: absolute;
+                left: -7vw; top: -5vw;
+            }
+        }
+        p{
+            color: #fff; font-size: 1.1rem; font-weight: 400;
+        }
+        ul{
+            margin: 70px 0;
+            @include flex(flex-start,center,nowrap,row);
+            li{
+                margin-right: 50px;
+                color: #fff; font-size: 1rem; font-weight: 400;
+                span{
+                    display: block;
+                    width: 18rem; height: 3px;
+                    background-color: #fff;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .sec-06, .sec-07{
+        @include flex(center,center,nowrap,column);
+        text-align: center;
+        h3{
+            font-size: 1.7rem; font-weight: 600; color: #fff;
+            span{
+                color: $light-brown; font-weight: 600; font-family: 'Playfair Display', serif;
+                font-size: 2.7rem; font-style: italic;
+            }
+        }
+    }
+    .sec-08{
+        padding: 0 2%;
+        @include flex(center,baseline,nowrap,row);
+        article{
+            @include flex(center,flex-start,nowrap,column);
+            width: 24.5%; height: 100%;
+            border-left: 1px solid rgba(255,255,255,0.3);
+            padding: 0 2%;
+            transition: .3s;
+            h3{
+                width: 50%;
+                font-weight: 600; font-family: 'Playfair Display', serif; font-size: 1.7rem;
+                color: #fff;
+                margin: 2vw 0;
+                transition: .3s;
+            }
+            p{
+                color: #fff; font-weight: 400; font-size: 0.9em;
+                transition: .3s;
+            }
+            &:hover{
+                background: rgba(0,0,0,0.4);
+                h3{color: $brown;}
+                p{color: $brown;}
+            }
+        }
+        article:nth-child(4){
+            border-right: 1px solid rgba(255,255,255,0.3);
+            h3{margin-bottom: 3.7rem;}
+        }
+    }
+}
+
+
+
+
+//=======================================mobile===================================
+//================================================================================
+@media (max-width:$mobile){
+    
+    aside{
+        .scroll{
+            position: fixed;
+            left: calc(50% - 50px); bottom: 0;
+            width: 100px;
+            color: #fff; font-size: 0.7rem; font-weight: 600;
+            z-index: 9;
+
+            @include flex(center,center,nowrap,column);
+    
+            animation: scroll 1s infinite alternate ease-in;
+            @keyframes scroll {
+                100%{transform: translateY(60px);}
+            }
+            span{
+                display: block;
+                width: 1px; height: 100px;
+                background-color: #fff;
+                margin-top: 20px;
+            }
+        }
+    
+        .button{
+            position: fixed;
+            right: 1rem; bottom: 4rem;
+            cursor: pointer;
+            z-index: 9;
+    
+            div{
+                width: 6vw; height: 6vw;
+                border-radius: 6vw;
+                @include flex(center,center,nowrap,row);
+                margin: 10px 0;
+                img{
+                    width: 50%;
+                }
+            }
+            div:nth-child(1){
+                background-color: $dark-red;
+            }
+            div:nth-child(2){
+                background-color: $btn-grey;
+            }
+        }
+    }
+    
+    
+    
+    
+    main{
+        position: relative;
+        div{
+            width: 100%; height: 100vh;
+            h2{            
+                font-family: 'DM Serif Display', serif; color: #fff;
+                font-size: 2.5rem;
+            }
+        }
+        $bgUrl : (
+            1:'../img/about/sub_visual_1.jpg',
+            2:'../img/about/about_img_1.jpg',
+            3:'../img/about/about_img_3_1.jpg',
+            4:'../img/about/about_img_3_2.jpg',
+            5:'../img/about/about_img_3_3.jpg',
+            6:'../img/about/about_img_5.jpg',
+            7:'../img/about/about_img_6.jpg',
+            8:'../img/about/about_img_7.jpg'
+            );
+        @each $k,$v in $bgUrl {
+            .sec:nth-of-type(#{$k}){
+                background: url($v) center center / cover no-repeat;
+            }
+        }    
+    }
+    
+    
+    
+    @keyframes showText {
+        0%{color: rgba(0,0,0,0);}
+        100%{transform: translateX(0); color: rgba(255,255,255,1);}
+    }
+    @keyframes showText2 {
+        0%{color: rgba(0,0,0,0);}
+        100%{transform: translateX(20vw); color: rgba(255,255,255,1);}
+    }
+    
+    .sec-01{ 
+        h2{
+            position: absolute;
+            left: 25vw; top: 40vh;
+            span:nth-child(1){
+                font-family: 'DM Serif Display', serif;
+                display: block;
+                color: rgba(0,0,0,0);
+                transform: translateX(-5vw);
+                animation: showText 1s forwards;
+            }
+            span:nth-child(2){
+                font-family: 'DM Serif Display', serif;
+                display: block;
+                color: rgba(0,0,0,0);
+                transform: translateX(10vw);
+                animation: showText2 1.5s forwards;
+                animation-delay: .3s;
+            }
+        }
+    }
+    
+    .sec-02{
+        text-align: center;
+        @include flex(center,center,nowrap,column);
+        h3{
+            color: $brown; font-weight: 600; font-size: 0.9rem;
+            margin: 30px 0;
+        }
+        h2{width: 50%;}
+        p{
+            color: $light-grey; font-size: 1rem; font-weight: 400;
+            margin: 30px 0;
+        }
+    }
+    .sec-03, .sec-04, .sec-05{
+        padding: 0 2%;
+        @include flex(center,flex-start,nowrap,column);
+        h2{
+            position: relative;
+            font-size: 4rem;
+            img{
+                display: none;
+                position: absolute;
+                left: -7vw; top: -5vw;
+            }
+        }
+        p{
+            color: #fff; font-size: 0.9rem; font-weight: 400;
+        }
+        ul{
+            margin: 70px 0;
+            @include flex(flex-start,center,nowrap,row);
+            li{
+                margin-right: 50px;
+                color: #fff; font-size: 0.9rem; font-weight: 400;
+                span{
+                    display: block;
+                    width: 18rem; height: 1px;
+                    background-color: #fff;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .sec-06, .sec-07{
+        @include flex(center,center,nowrap,column);
+        text-align: center;
+        h3{
+            font-size: 1.4rem; font-weight: 600; color: #fff;
+            span{
+                color: $light-brown; font-weight: 600; font-family: 'Playfair Display', serif;
+                font-size: 2.2rem; font-style: italic;
+            }
+        }
+    }
+    .sec-08{
+        padding: 0;
+        @include flex(center,baseline,nowrap,column);
+        article{
+            @include flex(center,flex-start,nowrap,column);
+            width: 100%; height: 24.5vh;
+            border-left:none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding: 0 2%;
+            transition: .3s;
+            h3{
+                width: 100%;
+                font-weight: 600; font-family: 'Playfair Display', serif; font-size: 1.7rem;
+                color: #fff;
+                margin: 2vw 0;
+                transition: .3s;
+            }
+            p{
+                color: #fff; font-weight: 400; font-size: 0.9em;
+                transition: .3s;
+            }
+            &:hover{
+                background: rgba(0,0,0,0.4);
+                h3{color: $brown;}
+                p{color: $brown;}
+            }
+        }
+        article:nth-child(4){
+            border-right: none;
+            border-bottom: none;
+            h3{margin-bottom: 1rem;}
+        }
+    }
+}

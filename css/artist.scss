@@ -1,0 +1,619 @@
+@import '_common.scss';
+@import '_mixin.scss';
+
+
+
+.kor{font-family: 'Roboto', sans-serif;}
+.bg{
+    position: fixed;
+    width: 100%; height: 100vh;
+    background: url('../img/artist/list_page_bg3.jpg') center 100% / cover no-repeat;
+    z-index: -10;
+}
+main{padding: 28vh 13% 0 13%;}
+.title{
+    @include flex(space-between,center,nowrap,row);
+    margin-bottom: 50px;
+    p{
+        color: $black-t;
+        span{
+            display: inline-block;
+            width: 7px; height: 7px;
+            margin: 0 7px;
+            border-top: 1px solid $black-t;
+            border-right: 1px solid $black-t;
+            transform: translateY(-2px) rotate(45deg);
+        }
+    }
+}
+.artist-description{
+    width: 100%; height: 30vh;
+    background: url('../img/artist/list_bg2.jpg') center center / cover no-repeat;
+    padding: 0 7%; margin-bottom: 100px;
+    @include flex(space-between,center,nowrap,row);
+    p{color: #fff; font-family: 'Playfair Display', serif; font-weight: 600;}
+    p:nth-child(1){
+        font-size: 1.7rem;
+        .kor{font-size: 1.3rem;font-weight: 400;}
+    }
+    p:nth-child(2){
+        font-size: 1.3rem;
+        padding: 20px 40px;
+        border: 1px solid $white-t;
+        .kor{font-size: 1.1rem;font-weight: 400;}
+    }
+}
+.category{
+    width: 100%;
+    margin-bottom: 20px;
+    @include flex(space-between,center,nowrap,row);
+    .search{
+        @include flex(space-between,center,nowrap,row);
+        border-bottom: 2px solid #000;
+        cursor: pointer;
+        input{
+            width: 20vw; height: 5vh;
+            background: transparent;
+            color: #eee; font-size: 1.1rem;
+            border: none;
+        }
+        .magnifier{
+            position: relative;
+            span:nth-child(1){
+                display: block;
+                width: 23px; height: 23px;
+                border-radius: 100%;
+                border: 2px solid #000;
+                position: absolute;
+                right: 0; top: -10px;
+            }
+            span:nth-child(2){
+                display: block;
+                width: 2px; height: 10px;
+                background-color: #000;
+                transform: rotate(-45deg);
+                position: absolute;
+                right: 0; top: 8px;
+
+            }
+        }
+    }
+    .searchOrder{
+        @include flex(space-between,center,nowrap,row);
+
+        button,select{
+            width: 7vw; height: 5vh; text-align: center;
+            font-size: 1.1rem; font-weight: 400;
+            cursor: pointer; transition: .3s;
+        }
+        button{            
+            background-color: $brown;
+            color: #fff; border: none;
+            margin-right: 10px;
+            &:hover{
+                background-color: $light-brown;
+            }
+        }
+        select{
+            background: transparent;
+            border: 1px solid rgba(0,0,0,0.3);
+            &:hover{
+                background-color: #fff;
+            }
+        }
+    }
+}
+.artist{
+    width: 100%;
+    @include flex(space-between,center,wrap,row);
+    li{
+        width: 23%; height: 45vh;
+        margin-bottom: 30px;
+        background-color: #fff;
+        a{
+            p{
+                border: 1px solid rgba(221, 221, 221, 0.4); padding: 20px;
+                width: 100%; height: 37.5vh;        
+                background-color: #eee;
+                position: relative;
+                @include flex(center,center,nowrap,row);
+                img{
+                    max-width:100%;
+                    max-height:100%;
+                }
+                &:hover::after{
+                    background-color: rgba(0,0,0,0.3);
+                    color: $light-brown;
+                }
+            }
+            p::after{
+                content: '+';
+                width: 100%; height: 100%;
+                background-color: rgba(0,0,0,0);
+                @include flex(center,center,nowrap,row);
+                position: absolute;
+                left: 0; top: 0;
+                color: rgba(0,0,0,0); font-size: 7rem;
+                transition: .5s;
+            }
+        }
+        
+        .nameSection{
+            width: 100%; height: 7.5vh;
+            border: 1px solid rgba(221, 221, 221, 0.4); padding: 20px;
+            .nickname{
+                color: $light-brown; font-size: 1.2rem; font-weight: 600;
+                letter-spacing:-1px;
+            }
+            .name{
+                font-size: 1.22rem; font-weight: 600; margin: 0 5px;
+                letter-spacing:-1px;
+            }
+            .enName{
+                color: #999; font-weight: 400; letter-spacing:-1px;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+    }
+}
+.index{
+    margin: 50px 0 150px 0;
+    @include flex(center,center,nowrap,row);
+    a{
+        display: inline-block;
+        width: 30px; height: 30px;
+        border-radius: 30px;
+        text-align: center;
+        margin: 0 10px;
+        color: #000; font-size: 1.3rem; font-weight: 600;
+    }
+    .idxActive{
+        color: #fff; background-color: $brown;
+    }
+}
+
+
+
+
+aside{
+    position: fixed;
+    right: 1rem; bottom: 4rem;
+    z-index: 9;
+    cursor: pointer;
+
+    div{
+        width: 4vw; height: 4vw;
+        border-radius: 4vw;
+        @include flex(center,center,nowrap,row);
+        margin: 20px 0;
+        img{
+            width: 35%;
+        }
+    }
+    div:nth-child(1){
+        background-color: $dark-red;
+    }
+    div:nth-child(2){
+        background-color: $btn-grey;
+    }
+}
+
+
+
+
+
+
+
+//=======================================tablet===================================
+//================================================================================
+@media (min-width:$mobile) and (max-width:$tablet){
+    
+    .kor{font-family: 'Roboto', sans-serif;}
+    .bg{
+        position: fixed;
+        width: 100%; height: 100vh;
+        background: url('../img/artist/list_page_bg3.jpg') center 100% / cover no-repeat;
+        z-index: -10;
+    }
+    main{padding: 21vh 0% 0 0%;}
+    .title{
+        @include flex(space-between,center,nowrap,row);
+        margin-bottom: 30px;
+        h2{
+            margin-left: 2%; font-size: 4rem;
+        }
+        p{
+            color: $black-t;
+            span{
+                display: inline-block;
+                width: 7px; height: 7px;
+                margin: 0 7px;
+                border-top: 1px solid $black-t;
+                border-right: 1px solid $black-t;
+                transform: translateY(-2px) rotate(45deg);
+            }
+        }
+    }
+    .artist-description{
+        width: 100%; height: 30vh;
+        background: url('../img/artist/list_bg2.jpg') center center / cover no-repeat;
+        padding: 0 2%; margin-bottom: 100px;
+        @include flex(space-between,center,nowrap,row);
+        p{color: #fff; font-family: 'Playfair Display', serif; font-weight: 600;}
+        p:nth-child(1){
+            font-size: 1.3rem;
+            .kor{font-size: 1.1rem;font-weight: 400;}
+        }
+        p:nth-child(2){
+            font-size: 1rem;
+            padding: 20px 40px;
+            border: 1px solid $white-t;
+            .kor{font-size: 1rem;font-weight: 400;}
+        }
+    }
+    .category{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 2%;
+        @include flex(space-between,center,nowrap,row);
+        .search{
+            @include flex(space-between,center,nowrap,row);
+            border-bottom: 2px solid #000;
+            cursor: pointer;
+            input{
+                width: 23vw; height: 5vh;
+                background: transparent;
+                color: #eee; font-size: 0.8rem;
+                border: none;
+            }
+            .magnifier{
+                position: relative;
+                span:nth-child(1){
+                    display: block;
+                    width: 20px; height: 20px;
+                    border-radius: 100%;
+                    border: 2px solid #000;
+                    position: absolute;
+                    right: 0; top: -10px;
+                }
+                span:nth-child(2){
+                    display: block;
+                    width: 2px; height: 7px;
+                    background-color: #000;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    right: 0; top: 6px;
+    
+                }
+            }
+        }
+        .searchOrder{
+            @include flex(space-between,center,nowrap,row);
+    
+            button,select{
+                width: 8vw; height: 5vh; text-align: center;
+                font-size: 0.8rem; font-weight: 400;
+                cursor: pointer; transition: .3s;
+            }
+            button{            
+                background-color: $brown;
+                color: #fff; border: none;
+                margin-right: 10px;
+                &:hover{
+                    background-color: $light-brown;
+                }
+            }
+            select{
+                background: transparent;
+                border: 1px solid rgba(0,0,0,0.3);
+                &:hover{
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    .artist{
+        width: 100%; padding: 0 2%;
+        @include flex(space-between,center,wrap,row);
+        li{
+            width: 32%; height: 40vh;
+            margin-bottom: 30px;
+            background-color: #fff;
+            a{
+                p{
+                    border: 1px solid rgba(221, 221, 221, 0.4); padding: 20px;
+                    width: 100%; height: 31vh;        
+                    background-color: #eee;
+                    position: relative;
+                    @include flex(center,center,nowrap,row);
+                    img{
+                        max-width:100%;
+                        max-height:100%;
+                    }
+                    &:hover::after{
+                        background-color: rgba(0,0,0,0.3);
+                        color: $light-brown;
+                    }
+                }
+                p::after{
+                    content: '+';
+                    width: 100%; height: 100%;
+                    background-color: rgba(0,0,0,0);
+                    @include flex(center,center,nowrap,row);
+                    position: absolute;
+                    left: 0; top: 0;
+                    color: rgba(0,0,0,0); font-size: 7rem;
+                    transition: .5s;
+                }
+            }
+            
+            .nameSection{
+                width: 100%; height: 9vh;
+                border: 1px solid rgba(221, 221, 221, 0.4); padding: 20px;
+                .nickname{
+                    color: $light-brown; font-size: 1.2rem; font-weight: 600;
+                    letter-spacing:-1px;
+                }
+                .name{
+                    font-size: 1.22rem; font-weight: 600; margin: 0 5px;
+                    letter-spacing:-1px;
+                }
+                .enName{
+                    color: #999; font-weight: 400; letter-spacing:-1px;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+    .index{
+        margin: 50px 0 150px 0;
+        @include flex(center,center,nowrap,row);
+        a{
+            display: inline-block;
+            width: 30px; height: 30px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 0 10px;
+            color: #000; font-size: 1.3rem; font-weight: 600;
+        }
+        .idxActive{
+            color: #fff; background-color: $brown;
+        }
+    }
+    
+    
+    
+    
+    aside{
+        position: fixed;
+        right: 1rem; bottom: 4rem;
+        z-index: 9;
+        cursor: pointer;
+    
+        div{
+            width: 4vw; height: 4vw;
+            border-radius: 4vw;
+            @include flex(center,center,nowrap,row);
+            margin: 20px 0;
+            img{
+                width: 50%;
+            }
+        }
+        div:nth-child(1){
+            background-color: $dark-red;
+        }
+        div:nth-child(2){
+            background-color: $btn-grey;
+        }
+    }
+}
+
+
+
+
+
+//=======================================mobile===================================
+//================================================================================
+@media (max-width:$mobile){
+
+    .kor{font-family: 'Roboto', sans-serif;}
+    .bg{
+        position: fixed;
+        width: 100%; height: 100vh;
+        background: url('../img/artist/list_page_bg3.jpg') center 100% / cover no-repeat;
+        z-index: -10;
+    }
+    main{padding: 21vh 0% 0 0%;}
+    .title{
+        @include flex(space-between,center,nowrap,row);
+        margin-bottom: 30px;
+        h2{
+            margin-left: 2%; font-size: 3rem;
+        }
+        p{
+            color: $black-t;
+            display: none;
+            span{
+                display: inline-block;
+                width: 7px; height: 7px;
+                margin: 0 7px;
+                border-top: 1px solid $black-t;
+                border-right: 1px solid $black-t;
+                transform: translateY(-2px) rotate(45deg);
+            }
+        }
+    }
+    .artist-description{
+        width: 100%; height: 30vh;
+        background: url('../img/artist/list_bg2.jpg') center center / cover no-repeat;
+        padding: 0 5%; margin-bottom: 100px;
+        @include flex(center,flex-start,nowrap,column);
+        p{color: #fff; font-family: 'Playfair Display', serif; font-weight: 600;}
+        p:nth-child(1){
+            font-size: 1rem;
+            margin-bottom: 15px;
+            .kor{font-size: 0.9rem;font-weight: 400;}
+        }
+        p:nth-child(2){
+            font-size: 0.9rem;
+            padding: 15px 30px;
+            border: 1px solid $white-t;
+            .kor{font-size: 0.8rem;font-weight: 400;}
+        }
+    }
+    .category{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 2%;
+        @include flex(flex-end,center,wrap-reverse,row);
+        .search{
+            @include flex(space-between,center,nowrap,row);
+            border-bottom: 2px solid #000;
+            margin: 20px 0;
+            cursor: pointer;
+            input{
+                width: 96vw; height: 5vh;
+                background: transparent;
+                color: #eee; font-size: 0.8rem;
+                border: none;
+            }
+            .magnifier{
+                position: relative;
+                span:nth-child(1){
+                    display: block;
+                    width: 20px; height: 20px;
+                    border-radius: 100%;
+                    border: 2px solid #000;
+                    position: absolute;
+                    right: 0; top: -10px;
+                }
+                span:nth-child(2){
+                    display: block;
+                    width: 2px; height: 7px;
+                    background-color: #000;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    right: 0; top: 6px;    
+                }
+            }
+        }
+        .searchOrder{
+            @include flex(space-between,center,nowrap,row);
+    
+            button,select{
+                width: 14vw; height: 5vh; text-align: center;
+                font-size: 0.8rem; font-weight: 400;
+                cursor: pointer; transition: .3s;
+            }
+            button{            
+                background-color: $brown;
+                color: #fff; border: none;
+                margin-right: 10px;
+                &:hover{
+                    background-color: $light-brown;
+                }
+            }
+            select{
+                background: transparent;
+                border: 1px solid rgba(0,0,0,0.3);
+                &:hover{
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    .artist{
+        width: 100%; padding: 0 2%;
+        @include flex(space-between,center,wrap,row);
+        li{
+            width: 48%; height: 35vh;
+            margin-bottom: 30px;
+            background-color: #fff;
+            a{
+                p{
+                    border: 1px solid rgba(221, 221, 221, 0.4); padding: 20px;
+                    width: 100%; height: 27vh;        
+                    background-color: #eee;
+                    position: relative;
+                    @include flex(center,center,nowrap,row);
+                    img{
+                        max-width:100%;
+                        max-height:100%;
+                    }
+                    &:hover::after{
+                        background-color: rgba(0,0,0,0.3);
+                        color: $light-brown;
+                    }
+                }
+                p::after{
+                    content: '+';
+                    width: 100%; height: 100%;
+                    background-color: rgba(0,0,0,0);
+                    @include flex(center,center,nowrap,row);
+                    position: absolute;
+                    left: 0; top: 0;
+                    color: rgba(0,0,0,0); font-size: 7rem;
+                    transition: .5s;
+                }
+            }
+            
+            .nameSection{
+                width: 100%; height: 8vh;
+                border: 1px solid rgba(221, 221, 221, 0.4); padding: 20px;
+                .nickname{
+                    color: $light-brown; font-size: 1.2rem; font-weight: 600;
+                    letter-spacing:-1px;
+                }
+                .name{
+                    font-size: 1.22rem; font-weight: 600; margin: 0 5px;
+                    letter-spacing:-1px;
+                }
+                .enName{
+                    color: #999; font-weight: 400; letter-spacing:-1px;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+    .index{
+        margin: 50px 0 150px 0;
+        @include flex(center,center,nowrap,row);
+        a{
+            display: inline-block;
+            width: 30px; height: 30px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 0 10px;
+            color: #000; font-size: 1.3rem; font-weight: 600;
+        }
+        .idxActive{
+            color: #fff; background-color: $brown;
+        }
+    }
+    
+    
+    
+    
+    aside{
+        position: fixed;
+        right: 1rem; bottom: 4rem;
+        z-index: 9;
+        cursor: pointer;
+    
+        div{
+            width: 6vw; height: 6vw;
+            border-radius: 6vw;
+            @include flex(center,center,nowrap,row);
+            margin: 10px 0;
+            img{
+                width: 50%;
+            }
+        }
+        div:nth-child(1){
+            background-color: $dark-red;
+        }
+        div:nth-child(2){
+            background-color: $btn-grey;
+        }
+    }
+}
